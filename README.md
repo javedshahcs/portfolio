@@ -4,7 +4,7 @@ A personal portfolio website showcasing my skills, projects, and experience as a
 
 ## 🔗 Live Demo
 
-[Add your live site link here]
+[View Live Portfolio](https://your-actual-link-here.com)
 
 ## 📖 About
 
@@ -79,9 +79,9 @@ portfolio/
 
 ## 📬 Contact
 
-- **WhatsApp:** [Add number]
+- **WhatsApp:** [0323-9195914]
 - **GitHub:** [https://github.com/syedjavedshah](https://github.com/syedjavedshah)
-- **Email:** [Add email]
+- **Email:** [javedshah.cs@gmail.com]
 
 ## 📄 License
 
