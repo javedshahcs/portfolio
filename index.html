@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Javed shah | Software Engineer &amp; Flutter Developer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind config (must load right after the CDN script, before Tailwind scans the page) -->
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="DevPortfolio Logo" class="w-8 h-8 rounded-md"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_SHQ6lwYgoUs4RdizFolMASXEuWsxpKBQv4tpk6yjOxxeEupHLcrV0EkthUeUCERQMffMm1sSv5kBBOk5mx55_QvaHwfZe9Lis53XBvgkRNLJKyKG0GDOv7ovd09nQ_OzeMyEsd4lSEOOVuGE9DZcWwsCvUUr40x0STla0R5moDRZw6Gy_YRuoctGl8GmMxUMcRe8SOA8Ll4qav_R9N3gdMxycUuBxegQohG8DpMkHbh8BSlzkZHH" />
+                <span class="font-display-lg text-headline-sm font-bold text-primary">DevPortfolio</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1" href="#home">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                    href="#experience">Experience</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+            </div>
+            <a class="px-6 py-2 rounded-full primary-btn text-white font-label-md text-label-md hover:scale-105 transition-transform"
+                href="#">
+                Resume
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden" id="home">
+        <!-- Abstract Glow Background -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 rounded-full blur-[120px]"></div>
+        <div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 items-center gap-12 relative z-10">
+            <div class="scroll-reveal active">
+                <p class="font-label-md text-label-md text-primary mb-4 tracking-[0.2em] uppercase">Welcome to my space
+                </p>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    I'm <span class="gradient-text">Javed shah</span><br />
+                    <span class="text-on-surface-variant" id="typing-text"></span><span
+                        class="animate-pulse text-primary">|</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    A motivated Computer Science graduate seeking an opportunity in a reputable organization where I can
+                    utilize
+                    my skills in Flutter, Firebase, frontend development, and software project management. My goal is to
+                    contribute to practical digital solutions, improve my technical expertise, and apply my academic
+                    knowledge and
+                    final year project experience to solve real-world problems effectively.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="assets/Javed_shah_Resume.pdf" download="Javed_shah_Resume.pdf"
+                        class="px-8 py-4 rounded-full primary-btn text-white font-label-md text-label-md flex items-center gap-2 hover:scale-105 transition-all">
+                        <span class="material-symbols-outlined text-[20px]">download</span>
+                        Download CV
+                    </a>
+                    <a href="https://wa.me/923239195914?text=Hi%20Javed%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20really%20impressed%20with%20your%20work.%20I%27d%20love%20to%20discuss%20a%20project%20with%20you!"
+                        target="_blank"
+                        class="px-8 py-4 rounded-full glass-card text-on-surface font-label-md text-label-md hover:bg-white/10 transition-all">
+                        Contact Me
+                    </a>
+                    <a href="https://github.com/syedjavedshah" target="_blank"
+                        class="px-8 py-4 rounded-full glass-card text-on-surface font-label-md text-label-md flex items-center gap-2 hover:bg-white/10 transition-all">
+                        <span class="material-symbols-outlined text-[20px]">code</span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="relative scroll-reveal active">
+                <div class="animate-float relative z-20">
+                    <img class="w-full h-auto rounded-3xl"
+                        alt="A professional 3D stylized illustration of a software engineer working at a futuristic workstation."
+                        src="me.jpeg" />
+                </div>
+                <!-- Visual Decorations -->
+                <div
+                    class="absolute -top-10 -right-10 w-32 h-32 border border-primary/20 rounded-full animate-[spin_10s_linear_infinite]">
+                </div>
+                <div
+                    class="absolute -bottom-10 -left-10 w-24 h-24 border border-secondary/20 rounded-full animate-[spin_15s_linear_infinite]">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-xxl relative" id="about">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="scroll-reveal">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-primary/10 rounded-2xl -rotate-6"></div>
+                        <div class="glass-card p-2 rounded-2xl relative">
+                            <img class="w-full aspect-square object-cover rounded-xl"
+                                alt="A professional portrait of a software engineer in a clean, modern tech environment."
+                                src="image.jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <h2 class="font-headline-md text-headline-md mb-6">
+                        Pioneering Digital <span class="text-primary">Innovation</span></h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        I am a passionate Software Engineer with hands-on experience in Flutter Development and a strong
+                        interest in Artificial Intelligence. I hold a Bachelor's degree in Computer Science and have
+                        built real-world applications using Flutter, Dart, Firebase, and GetX.
+                        Through my Flutter Development internship, I gained practical experience in building scalable
+                        mobile applications. I also explored AI Engineering through an internship opportunity, which
+                        strengthened my passion for AI and motivated me to keep learning.
+                        I enjoy creating clean, responsive, and user-friendly applications. My goal is to build
+                        innovative software, continuously improve my skills, and contribute to impactful projects.
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        My journey began with a passion for clean code and has evolved into a career focused on
+                        architectural excellence. I hold a Bachelor's in Computer Science and have spent the last 4
+                        years mastering reactive frameworks and cloud integrations. My goal is to build software that
+                        not only solves problems but delights users.
+                    </p>
+                    <div class="flex gap-12 mb-10">
+                        <div>
+                            <p class="text-primary font-display-lg text-headline-md">0-1</p>
+                            <p class="text-on-surface-variant font-label-md text-label-md">Years Exp.</p>
+                        </div>
+                        <div>
+                            <p class="text-primary font-display-lg text-headline-md">5+</p>
+                            <p class="text-on-surface-variant font-label-md text-label-md">Projects Done</p>
+                        </div>
+                        <div>
+                            <p class="text-primary font-display-lg text-headline-md">3+</p>
+                            <p class="text-on-surface-variant font-label-md text-label-md">Global Clients</p>
+                        </div>
+                    </div>
+                    <!-- <button class="flex items-center gap-2 text-primary font-label-md text-label-md group">
+                        Learn more about my journey
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="py-xxl bg-surface-container-lowest/50" id="skills">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline-md text-headline-md mb-4">Technical <span
+                        class="gradient-text">Proficiency</span></h2>
+                <p class="text-on-surface-variant max-w-xl mx-auto">Leveraging modern technologies to build innovative,
+                    scalable, and impactful software solutions.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 scroll-reveal">
+
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl"
+                            style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Flutter</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Core Specialty</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Dart</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Core Specialty</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">local_fire_department</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Firebase</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Core Specialty</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">save_as</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Git</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Core Specialty</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">C/C++</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Intermediate</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Python</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Intermediate</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">code</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Vs Code</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Expert</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">description</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Microsoft word</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Intermediate</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">table_chart</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Microsoft Excel</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Intermediate</p>
+                </div>
+                <div class="glass-card p-8 text-center group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">slideshow</span>
+                    </div>
+                    <h3 class="font-headline-sm text-label-md font-bold">Microsoft PowerPoint</h3>
+                    <p class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest">Intermediate</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="py-xxl" id="projects">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 scroll-reveal">
+                <div>
+                    <h2 class="font-headline-md text-headline-md mb-4">Featured <span
+                            class="text-primary">Creations</span></h2>
+                    <p class="text-on-surface-variant max-w-lg">A selection of my recent works where technical
+                        complexity meets sleek design.</p>
+                </div>
+                <a class="mt-6 md:mt-0 font-label-md text-label-md text-primary hover:underline underline-offset-8"
+                    href="#">View all projects</a>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-reveal">
+                <div class="glass-card group overflow-hidden rounded-2xl">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="A mockup of a futuristic fintech mobile app." src="sms.jpeg" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                            <a href="assets/demo.mp4" target="_blank"
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">link</a>
+                            <a href="https://github.com/syedjavedshah/EDUConnect_FYP" target="_blank"
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">code</a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">Flutter</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">Dart</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">FireBase</span>
+                        </div>
+                        <h1 class="font-headline-sm text-headline-sm mb-3">FYP</h1>
+                        <h3 class="font-headline-sm text-headline-sm mb-3">smart school mgt & public ranking system</h3>
+                        <p class="text-on-surface-variant font-body-md text-body-md read-more-text line-clamp-2">A
+                            Smart School Management and Public Ranking
+                            System is a Flutter and Firebase-based mobile application that digitalizes school management
+                            by handling
+                            students, teachers, attendance, results, fees, timetables, and communication. The system
+                            also provides a public
+                            school ranking feature based on academic performance.</p>
+                        <button class="read-more-btn text-primary font-label-md text-label-md mb-6 hover:underline">Read
+                            More</button>
+                        <div class="flex justify-between items-center">
+                            <button data-open-video="video-fintech"
+                                class="text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">Live
+                                Demo <span class="material-symbols-outlined text-[18px]">play_circle</span></button>
+
+                            <dialog id="video-fintech" class="bg-surface rounded-2xl p-4 max-w-2xl w-full">
+                                <video controls class="w-full rounded-xl">
+                                    <source src="assets/demo.mp4" type="video/mp4">
+                                </video>
+                                <button data-close-video
+                                    class="mt-4 px-6 py-2 rounded-full glass-card text-on-surface">Close</button>
+                            </dialog>
+                            <a href=" https://github.com/syedjavedshah/EDUConnect_FYP" target="_blank"
+                                class="text-green-400 hover:text-primary transition-colors" title="View Source Code">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card group overflow-hidden rounded-2xl">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="A minimalist e-commerce dashboard design for a luxury fashion brand."
+                            src="cga.jpeg" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                            <span
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">link</span>
+                            <span
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">code</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">Flutter</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">Dart</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm mb-3">CGPA Calculator</h3>
+                        <p class="text-on-surface-variant font-body-md text-body-md read-more-text line-clamp-2">A
+                            A cross-platform mobile app built with Flutter for Hazara University students to calculate their Semester GPA (SGPA), Cumulative GPA (CGPA), and weighted lab/theory scores. Designed with a custom "Midnight Elite" dark UI — glassmorphic cards, gradient accents, and smooth multi-step flows — the app turns a routine academic task into a clean, guided experience.</p>
+                            <button class="read-more-btn text-primary font-label-md text-label-md mb-6 hover:underline">Read
+                            More</button>
+                        <div class="flex justify-between items-center">
+                            <button
+                                class="text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">Live
+                                Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span></button>
+                            <button class="text-on-surface-variant hover:text-primary transition-colors"><span
+                                    class="material-symbols-outlined">construction</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card group overflow-hidden rounded-2xl">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            alt="A health and fitness tracking application UI with dark theme."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpVuK6npjAdrgewHdbDVM7Uu4PXkC3efPN_fh7WotTjRNFjo2dT1uNrb56vyN-EPQJdXbCVG-gpdy7Y9oS5dquYKJpni6v6Dfpohq9jmm13sLc8vNwDRwWsfM1ube-eObyiACYTPfWVXd4A16SLIu-7b1LctIsPm3WnRt_MFWL_-HwWyKDF9EhayL6hhaGKlv6Df2bw81pcOrmFDDHJEf7uN6N_RVdbHyk5F8zm1H7FRPdgxS9k4HZ" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                            <span
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">link</span>
+                            <span
+                                class="material-symbols-outlined p-3 bg-surface rounded-full text-primary cursor-pointer hover:bg-primary hover:text-surface transition-all">code</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">Swift</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">CoreData</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm mb-3">Pulse Fitness Tracker</h3>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-2">Real-time
+                            biometrics tracking app that syncs with IoT devices to provide detailed metabolic and
+                            athletic performance insights.</p>
+                        <div class="flex justify-between items-center">
+                            <button
+                                class="text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">Live
+                                Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span></button>
+                            <button class="text-on-surface-variant hover:text-primary transition-colors"><span
+                                    class="material-symbols-outlined">construction</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section class="py-xxl bg-surface-container-low/30" id="experience">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-md text-headline-md text-center mb-20 scroll-reveal">Career <span
+                    class="text-primary">Timeline</span></h2>
+            <div class="relative max-w-4xl mx-auto scroll-reveal">
+                <div
+                    class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 transform md:-translate-x-1/2">
+                </div>
+                <div class="relative flex flex-col md:flex-row gap-8 mb-16">
+                    <div class="md:w-1/2 md:text-right">
+                        <div class="glass-card p-8 ml-8 md:ml-0">
+                            <span class="text-primary font-label-md text-label-md mb-2 block"> August 2026 -
+                                present</span>
+                            <h3 class="font-headline-sm text-headline-sm mb-1">Flutter Developer | AI Engineering
+                                Aspirant</h3>
+                            <p class="text-on-surface-variant font-label-md text-label-md mb-4">Specilization</p>
+                            <p class="text-on-surface-variant text-body-md text-justify">Actively seeking Flutter
+                                Development and AI Engineering Internship opportunities while expanding my expertise
+                                through personal projects, continuous learning, and hands-on development with Flutter,
+                                Firebase, and modern technologies.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-[-5px] md:left-1/2 w-[10px] h-[10px] rounded-full bg-primary shadow-[0_0_15px_rgba(173,198,255,0.8)] md:-translate-x-1/2 top-10">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                <div class="relative flex flex-col md:flex-row gap-8 mb-16">
+                    <div class="md:w-1/2"></div>
+                    <div
+                        class="absolute left-[-5px] md:left-1/2 w-[10px] h-[10px] rounded-full bg-primary shadow-[0_0_15px_rgba(173,198,255,0.8)] md:-translate-x-1/2 top-10">
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="glass-card p-8 ml-8">
+                            <span class="text-primary font-label-md text-label-md mb-2 block">February 2026 - July
+                                2026</span>
+                            <h3 class="font-headline-sm text-headline-sm mb-1">Final Year Project & Personal Projects
+                            </h3>
+                            <p class="text-on-surface-variant font-label-md text-label-md mb-4">Learning & Practice
+                                prospective</p>
+                            <p class="text-on-surface-variant text-body-md text-justify">Developed my Smart School
+                                Management & Public Performance Ranking System as my Final Year Project while working on
+                                additional software projects. Enhanced my expertise in Flutter, Firebase, GetX, UI/UX
+                                design, API integration, and full application development, delivering practical and
+                                user-focused solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex flex-col md:flex-row gap-8 mb-16">
+                    <div class="md:w-1/2 md:text-right">
+                        <div class="glass-card p-8 ml-8 md:ml-0">
+                            <span class="text-primary font-label-md text-label-md mb-2 block">July 2025 - December
+                                2025</span>
+                            <h3 class="font-headline-sm text-headline-sm mb-1">Flutter Development Intern</h3>
+                            <p class="text-on-surface-variant font-label-md text-label-md mb-4">Startup Hub</p>
+                            <p class="text-on-surface-variant text-body-md text-justify">Successfully completed a
+                                5-month Flutter Development internship, where I contributed to real-world mobile
+                                application development, wrote clean and maintainable code, and strengthened my skills
+                                in Flutter, Firebase, API integration, and mobile app architecture.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-[-5px] md:left-1/2 w-[10px] h-[10px] rounded-full bg-primary shadow-[0_0_15px_rgba(173,198,255,0.8)] md:-translate-x-1/2 top-10">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                <div class="relative flex flex-col md:flex-row gap-8 mb-16">
+                    <div class="md:w-1/2"></div>
+                    <div
+                        class="absolute left-[-5px] md:left-1/2 w-[10px] h-[10px] rounded-full bg-primary shadow-[0_0_15px_rgba(173,198,255,0.8)] md:-translate-x-1/2 top-10">
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="glass-card p-8 ml-8">
+                            <span class="text-primary font-label-md text-label-md mb-2 block">April 2024 - May
+                                2025</span>
+                            <h3 class="font-headline-sm text-headline-sm mb-1">Computer Science Teacher</h3>
+                            <p class="text-on-surface-variant font-label-md text-label-md mb-4">Usama public school
+                                Banda piran</p>
+                            <p class="text-on-surface-variant text-body-md text-justify">Taught Computer Science
+                                subjects to students, prepared lesson plans, conducted practical sessions, and guided
+                                students in programming and computer fundamentals while developing strong communication
+                                and mentoring skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certificates -->
+    <section class="py-xxl">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-md text-headline-md text-center mb-16 scroll-reveal">Professional <span
+                    class="text-primary">Certifications</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">
+                <div class="glass-card p-6 flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-12 h-12 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary">flutter</span>
+                    </div>
+                    <h4 class="font-headline-sm text-label-md font-bold mb-1">Flutter Development Internship</h4>
+                    <p class="text-on-surface-variant text-[12px]">Issued by: TechConnectMind</p>
+                    <p class="text-on-surface-variant text-[12px]">Duration: 21 July 2025 - 21 December 2025</p>
+                </div>
+                <div class="glass-card p-6 flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-12 h-12 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary">school</span>
+                    </div>
+                    <h4 class="font-headline-sm text-label-md font-bold mb-1">Teaching Experience Certificate</h4>
+                    <p class="text-on-surface-variant text-[12px]">Issued by:Usama public school Banda piran</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-xxl relative" id="contact">
+        <div class="max-w-container-max mx-auto px-gutter relative z-10">
+            <div class="glass-card rounded-3xl overflow-hidden scroll-reveal">
+                <div class="grid lg:grid-cols-5">
+                    <div class="lg:col-span-2 p-12 primary-btn text-white relative">
+                        <div class="relative z-10">
+                            <h2 class="font-display-lg text-headline-md mb-6">Let's build something <br />extraordinary.
+                            </h2>
+                            <p class="mb-12 opacity-80">I am currently seeking Flutter Development and AI Engineering
+                                internship or entry-level opportunities. I am eager to contribute, learn from
+                                experienced teams, and build innovative software solutions that create real-world
+                                impact.</p>
+                            <ul class="space-y-6">
+                                <li class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined opacity-70">mail</span>
+                                    <span>javedshah.cs@gmail.com</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined opacity-70">call</span>
+                                    <span>+92 3239195914</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined opacity-70">location_on</span>
+                                    <span>Islamabad Pakistan</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+                    </div>
+                    <div class="lg:col-span-3 p-12 bg-surface">
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-md text-label-md text-on-surface-variant">Full Name</label>
+                                    <input
+                                        class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:opacity-30"
+                                        placeholder="Javed shah" type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-md text-label-md text-on-surface-variant">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:opacity-30"
+                                        placeholder="javed@example.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md text-on-surface-variant">Subject</label>
+                                <input
+                                    class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:opacity-30"
+                                    placeholder="Project Inquiry" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md text-on-surface-variant">Message</label>
+                                <textarea
+                                    class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:opacity-30"
+                                    placeholder="Tell me about your vision..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full py-5 rounded-xl primary-btn text-white font-bold tracking-wide hover:scale-[1.02] active:scale-[0.98] transition-all">
+                                SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer
+        class="w-full py-xl bg-surface border-t border-outline-variant/10 transition-opacity opacity-80 hover:opacity-100">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto font-label-md text-label-md">
+            <div class="flex items-center gap-2 mb-6 md:mb-0">
+                <span class="text-headline-sm font-bold text-primary">DevPortfolio</span>
+                <span class="text-on-surface-variant ml-4">© 2024 Software Engineer Portfolio. Built with
+                    precision.</span>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">GitHub</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

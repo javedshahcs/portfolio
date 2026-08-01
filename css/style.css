@@ -1,0 +1,107 @@
+/* ==========================================================
+   Tailwind Config (must run BEFORE the Tailwind CDN script
+   loads in index.html, so this part is injected as an inline
+   <script> tag referencing tailwindConfig below — see notes)
+   ========================================================== */
+
+/* This object is consumed by js/tailwind-config.js */
+
+/* ==========================================================
+   Custom Styles
+   ========================================================== */
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+.glass-card {
+    background: rgba(45, 52, 73, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.glass-card:hover {
+    border-color: rgba(173, 198, 255, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(77, 142, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #4d8eff 0%, #0267b8 100%);
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.4);
+}
+
+html { scroll-behavior: smooth; }
+
+/* Read More toggle */
+.read-more-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: -webkit-line-clamp 0.2s ease;
+}
+.read-more-text.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+}
+.read-more-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+/* Video Modal Fix */
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border: none;
+    max-height: 90vh;
+    max-width: 90vw;
+    overflow: hidden;
+    padding: 16px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+dialog video {
+    max-height: calc(90vh - 90px);
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Prevent background scroll when modal is open */
+body:has(dialog[open]) {
+    overflow: hidden;
+}
