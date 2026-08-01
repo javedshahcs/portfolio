@@ -79,7 +79,7 @@ portfolio/
 
 ## 📬 Contact
 
-- **WhatsApp:** [0323-9195914]
+- **WhatsApp:** [0323-9195914](0323-9195914)
 - **GitHub:** [https://github.com/syedjavedshah](https://github.com/syedjavedshah)
 - **Email:** [javedshah.cs@gmail.com]
 
