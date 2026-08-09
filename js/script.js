@@ -88,3 +88,59 @@ document.querySelectorAll('dialog').forEach(dialog => {
         }
     });
 });
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    });
+}
+
+
+// Contact Form Submission (Netlify Forms via AJAX)
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+const formError = document.getElementById('form-error');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Hide any previous messages
+        formSuccess.classList.add('hidden');
+        formError.classList.add('hidden');
+
+        const formData = new FormData(contactForm);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then((response) => {
+            if (response.ok) {
+                contactForm.reset();
+                formSuccess.classList.remove('hidden');
+                setTimeout(() => formSuccess.classList.add('hidden'), 6000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(() => {
+            formError.classList.remove('hidden');
+            setTimeout(() => formError.classList.add('hidden'), 6000);
+        });
+    });
+}
