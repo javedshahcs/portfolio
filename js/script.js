@@ -144,3 +144,42 @@ if (contactForm) {
         });
     });
 }
+
+// Automatic color assignment based on percentage (direct color, no Tailwind class conflicts)
+function getSkillColor(percent) {
+    if (percent >= 80) return '#4ade80';   // green-400
+    if (percent >= 60) return '#60a5fa';   // blue-400
+    if (percent >= 40) return '#facc15';   // yellow-400
+    return '#f87171';                       // red-400
+}
+
+// Apply colors immediately based on data-percent
+document.querySelectorAll('.skill-bar').forEach(bar => {
+    const percent = parseInt(bar.getAttribute('data-percent'), 10);
+    bar.style.backgroundColor = getSkillColor(percent);
+});
+
+document.querySelectorAll('.skill-percent-label').forEach(label => {
+    const percent = parseInt(label.getAttribute('data-percent'), 10);
+    label.style.color = getSkillColor(percent);
+});
+
+// Animate bars when About section comes into view
+const skillBars = document.querySelectorAll('.skill-bar');
+if (skillBars.length > 0) {
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 100);
+                skillObserver.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    skillBars.forEach(bar => skillObserver.observe(bar));
+}

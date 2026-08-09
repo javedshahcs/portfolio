@@ -51,6 +51,11 @@
 }
 
 html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
+
+section[id] {
+    scroll-margin-top: 100px;
+}
 
 /* Read More toggle */
 .read-more-text {
@@ -104,4 +109,14 @@ dialog video {
 /* Prevent background scroll when modal is open */
 body:has(dialog[open]) {
     overflow: hidden;
+}
+
+
+/* Skill Progress Bars */
+.skill-bar {
+    width: 0%;
+    transition: width 1.2s ease-out;
+}
+.skill-bar.animated {
+    /* width set inline via JS/HTML style attribute */
 }
